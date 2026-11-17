@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SecurePaper</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.24.7/babel.min.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+<div id="root"></div>
+<script type="text/babel">
+const { useState, useEffect } = React;
+const api = async (path, method = "GET", body) => {
+  const r = await fetch("/api" + path, { method, headers: { "Content-Type": "application/json" }, body: body ? JSON.stringify(body) : undefined });
+  const d = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(typeof d.detail === "string" ? d.detail : JSON.stringify(d.detail || r.statusText));
+  return d;
+};
+const Card = ({ title, children }) => <div className="bg-white rounded-xl shadow-sm border p-4 mb-4">{title && <h2 className="font-semibold mb-3">{title}</h2>}{children}</div>;
+const Btn = ({ onClick, children, kind = "p", disabled }) => <button disabled={disabled} onClick={onClick} className={"px-3 py-1.5 rounded-lg text-sm font-medium disabled:opacity-50 " + (kind === "p" ? "bg-indigo-600 text-white hover:bg-indigo-700" : "bg-slate-200 hover:bg-slate-300")}>{children}</button>;
+const Err = ({ e }) => e ? <div className="bg-red-50 text-red-700 border border-red-200 rounded p-2 text-sm mb-3 break-words">{e}</div> : null;
+const Badge = ({ ok, children }) => <span className={"inline-block text-xs px-2 py-0.5 rounded mr-1 mb-1 " + (ok ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800")}>{ok ? "✓" : "✗"} {children}</span>;
+const inp = "border rounded px-2 py-1 text-sm w-full";
+
+function MapEditor({ label, value, onChange }) {
+  return <div className="mb-3"><div className="text-sm font-medium mb-1">{label} (%)</div>
+    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">{Object.entries(value).map(([k, v]) =>
+      <label key={k} className="text-xs">{k}<input type="number" className={inp} value={v} onChange={e => onChange({ ...value, [k]: +e.target.value })} /></label>)}</div></div>;
+}
+
+function Policy() {
+  const [p, setP] = useState(null), [contracts, setC] = useState(null), [err, setE] = useState(""), [msg, setM] = useState("");
+  useEffect(() => { api("/policy").then(setP).catch(e => setE(e.message)); }, []);
+  if (!p) return <Err e={err} />;
+  const set = (k, v) => setP({ ...p, [k]: v });
+  const save = () => api("/policy", "PUT", p).then(() => { setM("Policy saved"); setE(""); }).catch(e => setE(e.message));
+  const compile = () => api("/compile", "POST").then(c => { setC(c); setE(""); }).catch(e => setE(e.message));
+  return <div><Err e={err} />
+    <Card title="High-level paper policy">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-3">
+        {[["name", "Name", "text"], ["total_questions", "Total questions", "number"], ["duration_minutes", "Duration (min)", "number"], ["max_reference_examples", "Max reference examples (X)", "number"], ["similarity_threshold", "Similarity threshold", "number"], ["candidates_per_slot", "Candidates per slot", "number"]].map(([k, l, t]) =>
+          <label key={k} className="text-xs">{l}<input type={t} step="any" className={inp} value={p[k]} onChange={e => set(k, t === "number" ? +e.target.value : e.target.value)} /></label>)}
+      </div>
+      <MapEditor label="Topic distribution" value={p.topics} onChange={v => set("topics", v)} />
+      <MapEditor label="Difficulty distribution" value={p.difficulty} onChange={v => set("difficulty", v)} />
+      <MapEditor label="Question types" value={p.types} onChange={v => set("types", v)} />
+      <div className="flex gap-2 items-center"><Btn onClick={save}>Save policy</Btn><Btn kind="s" onClick={compile}>Compile to slot contracts</Btn><span className="text-xs text-green-700">{msg}</span></div>
+    </Card>
+    {contracts && <Card title={`${contracts.length} question-slot contracts (autonomy envelopes)`}>
+      <div className="overflow-x-auto"><table className="text-xs w-full whitespace-nowrap"><thead><tr className="text-left border-b">{["Slot", "Topic", "Diff", "Type", "DoF", "Numeric", "Wording", "Context", "Formula", "Unknown", "Validation"].map(h => <th key={h} className="pr-3 py-1">{h}</th>)}</tr></thead>
+        <tbody>{contracts.map(c => <tr key={c.slot_id} className="border-b"><td className="pr-3">{c.slot_id}</td><td className="pr-3">{c.topic_region[0]}</td><td className="pr-3">{c.difficulty}</td><td className="pr-3">{c.allowed_types[0]}</td><td className="pr-3">{c.dof_level}</td><td>{c.numeric_freedom}</td><td>{c.wording_freedom}</td><td>{c.context_freedom}</td><td>{c.formula_freedom}</td><td>{c.unknown_freedom}</td><td className="pl-3">{c.deterministic_validation}</td></tr>)}</tbody></table></div></Card>}
+  </div>;
+}
+
+function Bank() {
+  const [bank, setB] = useState([]), [fams, setF] = useState([]), [err, setE] = useState("");
+  const [f, setFm] = useState({ text: "", options: "", answer: 0, topic: "", difficulty: "" });
+  const load = () => { api("/bank").then(setB); api("/families").then(setF); };
+  useEffect(load, []);
+  const add = () => api("/bank", "POST", { ...f, options: f.options.split("\n") }).then(() => { setFm({ text: "", options: "", answer: 0, topic: "", difficulty: "" }); setE(""); load(); }).catch(e => setE(e.message));
+  return <div>
+    <Card title="Upload a question (auto-tagged if topic / difficulty left blank)"><Err e={err} />
+      <textarea className={inp + " mb-2"} rows="2" placeholder="Question text" value={f.text} onChange={e => setFm({ ...f, text: e.target.value })} />
+      <textarea className={inp + " mb-2"} rows="4" placeholder="Options, one per line" value={f.options} onChange={e => setFm({ ...f, options: e.target.value })} />
+      <div className="grid grid-cols-3 gap-2 mb-2">
+        <label className="text-xs">Correct option # (0-based)<input type="number" className={inp} value={f.answer} onChange={e => setFm({ ...f, answer: +e.target.value })} /></label>
+        <label className="text-xs">Topic<select className={inp} value={f.topic} onChange={e => setFm({ ...f, topic: e.target.value })}><option value="">auto</option>{["Arithmetic", "Mechanics", "Electricity"].map(t => <option key={t}>{t}</option>)}</select></label>
+        <label className="text-xs">Difficulty<select className={inp} value={f.difficulty} onChange={e => setFm({ ...f, difficulty: e.target.value })}><option value="">auto</option>{["easy", "medium", "hard"].map(t => <option key={t}>{t}</option>)}</select></label>
+      </div><Btn onClick={add}>Ingest question</Btn></Card>
+    <Card title={`Question families (${fams.length})`}><div className="grid sm:grid-cols-2 gap-2 text-xs">{fams.map(x => <div key={x.id} className="border rounded p-2"><b>{x.id}</b> · {x.topic} · {x.difficulty}<div className="font-mono my-1">{x.formula}</div>unknowns: {x.unknowns.join(", ")}</div>)}</div></Card>
+    <Card title={`Reference bank (${bank.length})`}>{bank.map(q => <div key={q.id} className="border-b py-2 text-sm flex justify-between gap-2"><div><div>{q.text}</div><div className="text-xs text-slate-500">{q.topic} · {q.difficulty} · {q.options.map((o, i) => (i === q.answer ? "✓ " : "") + o).join(" | ")}</div></div><button className="text-red-600 text-xs" onClick={() => api("/bank/" + q.id, "DELETE").then(load)}>delete</button></div>)}</Card>
+  </div>;
+}
+
+function Preview() {
+  const [fams, setF] = useState([]), [fid, setFid] = useState(""), [count, setCount] = useState(3), [res, setR] = useState(null), [err, setE] = useState("");
+  useEffect(() => { api("/families").then(f => { setF(f); setFid(f[0].id); }); }, []);
+  const go = () => api("/preview", "POST", { family_id: fid, count }).then(r => { setR(r); setE(""); }).catch(e => setE(e.message));
+  return <div><Card title="Bounded generation + deterministic validation preview">
+    <div className="flex flex-wrap gap-2 items-end mb-3">
+      <label className="text-xs">Family<select className={inp} value={fid} onChange={e => setFid(e.target.value)}>{fams.map(f => <option key={f.id} value={f.id}>{f.id} — {f.formula}</option>)}</select></label>
+      <label className="text-xs">Count<input type="number" className={inp} value={count} onChange={e => setCount(+e.target.value)} /></label>
+      <Btn onClick={go}>Generate</Btn></div><Err e={err} />
+    {res && <><pre className="text-xs bg-slate-100 rounded p-2 mb-3 overflow-x-auto">{JSON.stringify(res.contract, null, 1)}</pre>
+      {res.questions.map(q => <div key={q.id} className="border rounded p-3 mb-2 text-sm"><div>{q.text}</div>
+        <div className="text-xs mt-1">{q.options.map((o, i) => <span key={i} className={"mr-3 " + (i === q.answer ? "font-bold text-green-700" : "")}>{"ABCD"[i]}) {o}</span>)}</div>
+        <div className="mt-2">{q.validation.map((v, i) => <Badge key={i} ok={v.passed}>{v.check}</Badge>)}</div></div>)}</>}
+  </Card></div>;
+}
+
+function Papers() {
+  const [form, setForm] = useState({ release_in_minutes: 0.5, k: 3, n: 5 }), [run, setRun] = useState(null), [list, setL] = useState([]), [err, setE] = useState(""), [busy, setBusy] = useState(false);
+  const [sh, setSh] = useState({}), [out, setOut] = useState({}), [, tick] = useState(0);
+  const load = () => api("/papers").then(setL);
+  useEffect(() => { load(); const t = setInterval(() => tick(x => x + 1), 1000); return () => clearInterval(t); }, []);
+  const go = () => { setBusy(true); setE(""); api("/papers/run", "POST", form).then(r => { setRun(r); setSh(s => ({ ...s, [r.paper_id]: r.shares.slice(0, r.k).join("\n") })); load(); }).catch(e => setE(e.message)).finally(() => setBusy(false)); };
+  const rel = id => api(`/papers/${id}/release`, "POST", { shares: (sh[id] || "").split("\n") }).then(p => { setOut(o => ({ ...o, [id]: p })); setE(""); load(); }).catch(e => setE(e.message));
+  const left = p => Math.max(0, Math.ceil((new Date(p.release_at) - Date.now()) / 1000));
+  return <div><Err e={err} />
+    <Card title="Run pipeline: compile → generate → validate → select → encrypt → seal">
+      <div className="grid grid-cols-3 gap-2 mb-3">
+        <label className="text-xs">Release in (min)<input type="number" step="0.1" className={inp} value={form.release_in_minutes} onChange={e => setForm({ ...form, release_in_minutes: +e.target.value })} /></label>
+        <label className="text-xs">Threshold k<input type="number" className={inp} value={form.k} onChange={e => setForm({ ...form, k: +e.target.value })} /></label>
+        <label className="text-xs">Trustees n<input type="number" className={inp} value={form.n} onChange={e => setForm({ ...form, n: +e.target.value })} /></label></div>
+      <Btn onClick={go} disabled={busy}>{busy ? "Running…" : "Generate & seal paper"}</Btn></Card>
+    {run && <Card title={`Sealed ${run.paper_id}`}>
+      <div className="text-sm mb-2">{run.slots} slots · {run.candidates} validated candidates · {run.rejected} rejected · timings {JSON.stringify(run.timings)}</div>
+      <div className="mb-2">{run.checks.map(c => <Badge key={c.check} ok={c.passed}>{c.check}: {c.detail}</Badge>)}</div>
+      <div className="text-xs font-medium mb-1">Trustee key shares (shown once — not stored by the server):</div>
+      <pre className="text-[10px] bg-slate-100 rounded p-2 overflow-x-auto break-all whitespace-pre-wrap">{run.shares.map((s, i) => `Trustee ${i + 1}: ${s}`).join("\n")}</pre></Card>}
+    <Card title="Sealed papers">{list.length === 0 && <div className="text-sm text-slate-500">None yet.</div>}
+      {list.map(p => <div key={p.id} className="border rounded p-3 mb-3 text-sm">
+        <div className="flex justify-between"><b>{p.id}</b><span className={p.status === "released" ? "text-green-700" : "text-amber-700"}>{p.status}{p.locked ? ` · opens in ${left(p)} s` : ""}</span></div>
+        <div className="text-xs text-slate-500">{p.k}-of-{p.n} · seed hash {p.seed_hash.slice(0, 12)}… · release {new Date(p.release_at).toLocaleTimeString()}</div>
+        {!out[p.id] && <><textarea rows="3" className={inp + " mt-2 text-[10px] font-mono"} placeholder="Paste k shares, one per line" value={sh[p.id] || ""} onChange={e => setSh({ ...sh, [p.id]: e.target.value })} />
+          <div className="mt-2"><Btn onClick={() => rel(p.id)}>Request release</Btn></div></>}
+        {out[p.id] && <div className="mt-3"><div className="font-semibold">{out[p.id].title} — {out[p.id].duration_minutes} min</div>
+          {out[p.id].questions.map(q => <div key={q.no} className="py-1 border-b"><b>{q.no}.</b> {q.text}<div className="text-xs text-slate-600">{q.options.map((o, i) => `${"ABCD"[i]}) ${o}`).join("   ")} <i>[{q.topic}/{q.difficulty}]</i></div></div>)}
+          <details className="mt-2"><summary className="cursor-pointer text-xs">Answer key</summary><div className="text-xs">{out[p.id].answer_key.map(a => `${a.no}:${a.answer}`).join("  ")}</div></details></div>}
+      </div>)}</Card></div>;
+}
+
+function Audit() {
+  const [rows, setR] = useState([]);
+  useEffect(() => { api("/audit").then(setR); }, []);
+  return <Card title="Tamper-evident audit trail (hash-chained)"><div className="overflow-x-auto"><table className="text-xs w-full"><thead><tr className="text-left border-b"><th>Time</th><th>Event</th><th>Detail</th><th>Hash</th></tr></thead>
+    <tbody>{rows.map(r => <tr key={r.id} className="border-b align-top"><td className="pr-2 whitespace-nowrap">{new Date(r.ts).toLocaleTimeString()}</td><td className="pr-2 font-medium">{r.event}</td><td className="pr-2 break-all max-w-md">{r.detail.slice(0, 160)}</td><td className="font-mono">{r.hash.slice(0, 10)}</td></tr>)}</tbody></table></div></Card>;
+}
+
+function App() {
+  const tabs = { Policy, "Bank & Families": Bank, "Generate Preview": Preview, Papers, Audit };
+  const [tab, setTab] = useState("Policy"), T = tabs[tab];
+  return <div className="max-w-5xl mx-auto p-4">
+    <h1 className="text-2xl font-bold">SecurePaper</h1>
+    <p className="text-sm text-slate-500 mb-4">Policy-governed AI question generation · bounded autonomy · deterministic validation · secure late-binding release</p>
+    <div className="flex flex-wrap gap-2 mb-4">{Object.keys(tabs).map(t => <button key={t} onClick={() => setTab(t)} className={"px-3 py-1.5 rounded-full text-sm " + (tab === t ? "bg-indigo-600 text-white" : "bg-white border")}>{t}</button>)}</div>
+    <T key={tab} /></div>;
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script></body></html>

@@ -1,0 +1,1 @@
+"""SecurePaper MCQ demo backend."""
