@@ -1,0 +1,1352 @@
+[
+  {
+    "subject": "Electrical",
+    "topic": "Fundamentals",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "What is the SI unit of electric current?",
+    "correct_option": "Ampere",
+    "wrong_options": [
+      "Volt",
+      "Ohm",
+      "Watt",
+      "Coulomb",
+      "Farad"
+    ]
+  },
+  {
+    "subject": "Electrical",
+    "topic": "Measurements",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "Which instrument is designed to measure potential difference?",
+    "correct_option": "Voltmeter",
+    "wrong_options": [
+      "Ammeter",
+      "Ohmmeter",
+      "Wattmeter",
+      "Galvanometer",
+      "Energy meter"
+    ]
+  },
+  {
+    "subject": "Electrical",
+    "topic": "Circuit laws",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "Which law expresses the relation V = I × R for an ohmic conductor?",
+    "correct_option": "Ohm's law",
+    "wrong_options": [
+      "Coulomb's law",
+      "Lenz's law",
+      "Faraday's law",
+      "Kirchhoff's current law",
+      "Joule's law"
+    ]
+  },
+  {
+    "subject": "Electrical",
+    "topic": "DC circuits",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "In a simple series circuit, which quantity is the same through every component?",
+    "correct_option": "Current",
+    "wrong_options": [
+      "Voltage",
+      "Resistance",
+      "Power",
+      "Capacitance",
+      "Stored energy"
+    ]
+  },
+  {
+    "subject": "Electrical",
+    "topic": "Resistors",
+    "difficulty": "easy",
+    "question_type": "application",
+    "text": "A resistor has bands brown, black, red and gold. What is its nominal resistance?",
+    "correct_option": "1 kΩ",
+    "wrong_options": [
+      "10 Ω",
+      "100 Ω",
+      "10 kΩ",
+      "100 kΩ",
+      "1 MΩ"
+    ]
+  },
+  {
+    "subject": "Electrical",
+    "topic": "Fundamentals",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "What is the SI unit of electrical resistance?",
+    "correct_option": "Ohm",
+    "wrong_options": [
+      "Ampere",
+      "Volt",
+      "Farad",
+      "Henry",
+      "Tesla"
+    ]
+  },
+  {
+    "subject": "Electrical",
+    "topic": "Series circuits",
+    "difficulty": "medium",
+    "question_type": "numerical",
+    "text": "Two resistors of 4 Ω and 6 Ω are connected in series. What is the total resistance?",
+    "correct_option": "10 Ω",
+    "wrong_options": [
+      "2.4 Ω",
+      "24 Ω",
+      "1 Ω",
+      "5 Ω",
+      "12 Ω"
+    ]
+  },
+  {
+    "subject": "Electrical",
+    "topic": "Parallel circuits",
+    "difficulty": "medium",
+    "question_type": "numerical",
+    "text": "What is the equivalent resistance of 6 Ω and 3 Ω connected in parallel?",
+    "correct_option": "2 Ω",
+    "wrong_options": [
+      "9 Ω",
+      "3 Ω",
+      "1.5 Ω",
+      "18 Ω",
+      "4.5 Ω"
+    ]
+  },
+  {
+    "subject": "Electrical",
+    "topic": "Ohm's law",
+    "difficulty": "medium",
+    "question_type": "numerical",
+    "text": "A 2 Ω resistor carries 3 A. What voltage is across it?",
+    "correct_option": "6 V",
+    "wrong_options": [
+      "1.5 V",
+      "5 V",
+      "9 V",
+      "12 V",
+      "18 V"
+    ]
+  },
+  {
+    "subject": "Electrical",
+    "topic": "Electrical power",
+    "difficulty": "medium",
+    "question_type": "numerical",
+    "text": "A device draws 2 A from a 12 V supply. What is its electrical power?",
+    "correct_option": "24 W",
+    "wrong_options": [
+      "6 W",
+      "10 W",
+      "14 W",
+      "48 W",
+      "144 W"
+    ]
+  },
+  {
+    "subject": "Electrical",
+    "topic": "Circuit laws",
+    "difficulty": "medium",
+    "question_type": "reasoning",
+    "text": "Kirchhoff's current law follows from conservation of which quantity?",
+    "correct_option": "Electric charge",
+    "wrong_options": [
+      "Energy",
+      "Mass",
+      "Momentum",
+      "Power",
+      "Magnetic flux"
+    ]
+  },
+  {
+    "subject": "Electrical",
+    "topic": "Power electronics",
+    "difficulty": "medium",
+    "question_type": "application",
+    "text": "What is the main electrical conversion performed by a rectifier?",
+    "correct_option": "AC to DC",
+    "wrong_options": [
+      "DC to AC",
+      "AC to mechanical motion",
+      "DC to heat only",
+      "DC to optical light",
+      "AC to higher-frequency AC"
+    ]
+  },
+  {
+    "subject": "Electrical",
+    "topic": "Series circuits",
+    "difficulty": "hard",
+    "question_type": "numerical",
+    "text": "A 2 A current flows through series resistors of 3 Ω and 7 Ω. What source voltage is required?",
+    "correct_option": "20 V",
+    "wrong_options": [
+      "5 V",
+      "10 V",
+      "14 V",
+      "40 V",
+      "70 V"
+    ]
+  },
+  {
+    "subject": "Electrical",
+    "topic": "RC circuits",
+    "difficulty": "hard",
+    "question_type": "numerical",
+    "text": "What is the time constant of a 2 kΩ resistor and 3 µF capacitor in series?",
+    "correct_option": "6 ms",
+    "wrong_options": [
+      "0.006 ms",
+      "0.6 ms",
+      "6 s",
+      "60 ms",
+      "600 ms"
+    ]
+  },
+  {
+    "subject": "Electrical",
+    "topic": "AC circuits",
+    "difficulty": "hard",
+    "question_type": "numerical",
+    "text": "A sinusoidal voltage has a peak value of 20 V. Approximately what is its RMS value?",
+    "correct_option": "14.14 V",
+    "wrong_options": [
+      "7.07 V",
+      "10 V",
+      "20 V",
+      "28.28 V",
+      "40 V"
+    ]
+  },
+  {
+    "subject": "Electrical",
+    "topic": "Energy consumption",
+    "difficulty": "hard",
+    "question_type": "numerical",
+    "text": "A 500 W appliance operates for 2 hours. How much electrical energy does it consume?",
+    "correct_option": "1 kWh",
+    "wrong_options": [
+      "0.25 kWh",
+      "0.5 kWh",
+      "2 kWh",
+      "4 kWh",
+      "10 kWh"
+    ]
+  },
+  {
+    "subject": "Electrical",
+    "topic": "Three-phase systems",
+    "difficulty": "hard",
+    "question_type": "reasoning",
+    "text": "In a balanced star-connected three-phase system, line voltage equals phase voltage multiplied by what?",
+    "correct_option": "√3",
+    "wrong_options": [
+      "1/√3",
+      "1",
+      "2",
+      "3",
+      "√2"
+    ]
+  },
+  {
+    "subject": "Electrical",
+    "topic": "AC circuits",
+    "difficulty": "hard",
+    "question_type": "reasoning",
+    "text": "For a fixed capacitor, what happens to capacitive reactance when frequency doubles?",
+    "correct_option": "It becomes half",
+    "wrong_options": [
+      "It doubles",
+      "It becomes four times",
+      "It remains unchanged",
+      "It becomes zero",
+      "It becomes one quarter"
+    ]
+  },
+  {
+    "subject": "Chemistry",
+    "topic": "Periodic table",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "What is the chemical symbol for sodium?",
+    "correct_option": "Na",
+    "wrong_options": [
+      "S",
+      "Sn",
+      "N",
+      "Ni",
+      "So"
+    ]
+  },
+  {
+    "subject": "Chemistry",
+    "topic": "Atomic structure",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "The atomic number of an element equals the number of which particles?",
+    "correct_option": "Protons",
+    "wrong_options": [
+      "Neutrons",
+      "Nucleons",
+      "Protons plus neutrons",
+      "Valence electrons only",
+      "Electron shells"
+    ]
+  },
+  {
+    "subject": "Chemistry",
+    "topic": "Compounds",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "What is the chemical formula of water?",
+    "correct_option": "H₂O",
+    "wrong_options": [
+      "H₂O₂",
+      "CO₂",
+      "H₃O",
+      "H₂",
+      "H₂O₃"
+    ]
+  },
+  {
+    "subject": "Chemistry",
+    "topic": "Acids and bases",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "At 25°C, what is the approximate pH of a neutral aqueous solution?",
+    "correct_option": "7",
+    "wrong_options": [
+      "0",
+      "1",
+      "5",
+      "10",
+      "14"
+    ]
+  },
+  {
+    "subject": "Chemistry",
+    "topic": "Chemical bonding",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "What mainly happens to electrons when a covalent bond forms?",
+    "correct_option": "They are shared between atoms",
+    "wrong_options": [
+      "They are fully transferred",
+      "They are converted into protons",
+      "Neutrons are shared",
+      "Nuclei are exchanged",
+      "They all leave both atoms"
+    ]
+  },
+  {
+    "subject": "Chemistry",
+    "topic": "Molecules",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "An oxygen molecule written O₂ contains how many oxygen atoms?",
+    "correct_option": "2",
+    "wrong_options": [
+      "1",
+      "3",
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  {
+    "subject": "Chemistry",
+    "topic": "Mole concept",
+    "difficulty": "medium",
+    "question_type": "numerical",
+    "text": "What is the molar mass of CO₂? (C = 12, O = 16 g/mol)",
+    "correct_option": "44 g/mol",
+    "wrong_options": [
+      "12 g/mol",
+      "16 g/mol",
+      "28 g/mol",
+      "32 g/mol",
+      "48 g/mol"
+    ]
+  },
+  {
+    "subject": "Chemistry",
+    "topic": "Solutions",
+    "difficulty": "medium",
+    "question_type": "numerical",
+    "text": "What is the molarity of 0.5 mol of solute in 1 litre of solution?",
+    "correct_option": "0.5 M",
+    "wrong_options": [
+      "0.05 M",
+      "0.25 M",
+      "1 M",
+      "2 M",
+      "5 M"
+    ]
+  },
+  {
+    "subject": "Chemistry",
+    "topic": "Stoichiometry",
+    "difficulty": "medium",
+    "question_type": "reasoning",
+    "text": "In 2H₂ + O₂ → 2H₂O, what is the mole ratio of H₂ to O₂ consumed?",
+    "correct_option": "2 : 1",
+    "wrong_options": [
+      "1 : 2",
+      "1 : 1",
+      "3 : 2",
+      "2 : 3",
+      "4 : 3"
+    ]
+  },
+  {
+    "subject": "Chemistry",
+    "topic": "Redox",
+    "difficulty": "medium",
+    "question_type": "conceptual",
+    "text": "In terms of electron transfer, oxidation means what?",
+    "correct_option": "Loss of electrons",
+    "wrong_options": [
+      "Gain of electrons",
+      "Gain of neutrons",
+      "Loss of protons",
+      "Gain of protons",
+      "No change in electron count"
+    ]
+  },
+  {
+    "subject": "Chemistry",
+    "topic": "Reaction kinetics",
+    "difficulty": "medium",
+    "question_type": "conceptual",
+    "text": "How does a catalyst generally affect the activation energy of a reaction?",
+    "correct_option": "It lowers the activation energy",
+    "wrong_options": [
+      "It raises the activation energy",
+      "It increases the reaction enthalpy",
+      "It is always consumed completely",
+      "It changes the equilibrium constant at fixed temperature",
+      "It changes the balanced equation"
+    ]
+  },
+  {
+    "subject": "Chemistry",
+    "topic": "Acids and bases",
+    "difficulty": "medium",
+    "question_type": "reasoning",
+    "text": "Compared with a solution of pH 4, a solution of pH 3 has approximately how much more H⁺ concentration?",
+    "correct_option": "10 times",
+    "wrong_options": [
+      "2 times",
+      "100 times",
+      "The same",
+      "One tenth",
+      "1000 times"
+    ]
+  },
+  {
+    "subject": "Chemistry",
+    "topic": "Acids and bases",
+    "difficulty": "hard",
+    "question_type": "numerical",
+    "text": "Assuming full dissociation, what is the approximate pH of 0.001 M HCl?",
+    "correct_option": "3",
+    "wrong_options": [
+      "1",
+      "2",
+      "4",
+      "7",
+      "11"
+    ]
+  },
+  {
+    "subject": "Chemistry",
+    "topic": "Solutions",
+    "difficulty": "hard",
+    "question_type": "numerical",
+    "text": "What is the molarity of 0.2 mol NaOH dissolved to make 0.5 L solution?",
+    "correct_option": "0.4 M",
+    "wrong_options": [
+      "0.1 M",
+      "0.2 M",
+      "0.5 M",
+      "1 M",
+      "2 M"
+    ]
+  },
+  {
+    "subject": "Chemistry",
+    "topic": "Oxidation numbers",
+    "difficulty": "hard",
+    "question_type": "reasoning",
+    "text": "What is the oxidation state of Mn in KMnO₄?",
+    "correct_option": "+7",
+    "wrong_options": [
+      "+2",
+      "+4",
+      "+5",
+      "+6",
+      "+8"
+    ]
+  },
+  {
+    "subject": "Chemistry",
+    "topic": "Electrochemistry",
+    "difficulty": "hard",
+    "question_type": "numerical",
+    "text": "How many electrons does one Cu²⁺ ion gain to become a neutral Cu atom?",
+    "correct_option": "2",
+    "wrong_options": [
+      "0",
+      "1",
+      "3",
+      "4",
+      "6"
+    ]
+  },
+  {
+    "subject": "Chemistry",
+    "topic": "Stoichiometry",
+    "difficulty": "hard",
+    "question_type": "numerical",
+    "text": "CaCO₃ → CaO + CO₂. Roughly how much CO₂ forms from 10 g CaCO₃? (Molar masses: 100 and 44 g/mol)",
+    "correct_option": "4.4 g",
+    "wrong_options": [
+      "1.1 g",
+      "2.2 g",
+      "5.6 g",
+      "8.8 g",
+      "10 g"
+    ]
+  },
+  {
+    "subject": "Chemistry",
+    "topic": "Chemical equilibrium",
+    "difficulty": "hard",
+    "question_type": "reasoning",
+    "text": "At constant temperature, adding a reactant to a simple equilibrium mixture generally shifts the equilibrium in which direction?",
+    "correct_option": "Toward products",
+    "wrong_options": [
+      "Toward reactants",
+      "There is no shift",
+      "The equilibrium constant increases",
+      "The equilibrium constant decreases",
+      "The reaction permanently stops"
+    ]
+  },
+  {
+    "subject": "Physics",
+    "topic": "Forces",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "What is the SI unit of force?",
+    "correct_option": "Newton",
+    "wrong_options": [
+      "Joule",
+      "Watt",
+      "Pascal",
+      "Kilogram",
+      "Metre"
+    ]
+  },
+  {
+    "subject": "Physics",
+    "topic": "Motion",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "Average speed equals total distance divided by which quantity?",
+    "correct_option": "Total time",
+    "wrong_options": [
+      "Acceleration",
+      "Displacement",
+      "Mass",
+      "Net force",
+      "Momentum"
+    ]
+  },
+  {
+    "subject": "Physics",
+    "topic": "Gravity",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "Near Earth's surface, gravitational acceleration is approximately what?",
+    "correct_option": "9.8 m/s²",
+    "wrong_options": [
+      "0.98 m/s²",
+      "4.9 m/s²",
+      "19.6 m/s²",
+      "98 m/s²",
+      "9.8 m/s"
+    ]
+  },
+  {
+    "subject": "Physics",
+    "topic": "Energy",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "Which expression gives translational kinetic energy?",
+    "correct_option": "½mv²",
+    "wrong_options": [
+      "mgh",
+      "mv",
+      "ma",
+      "½kx",
+      "mc²"
+    ]
+  },
+  {
+    "subject": "Physics",
+    "topic": "Work and power",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "What is the SI unit of power?",
+    "correct_option": "Watt",
+    "wrong_options": [
+      "Joule",
+      "Newton",
+      "Pascal",
+      "Coulomb",
+      "Tesla"
+    ]
+  },
+  {
+    "subject": "Physics",
+    "topic": "Newton's laws",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "Which law describes inertia?",
+    "correct_option": "Newton's first law",
+    "wrong_options": [
+      "Newton's second law",
+      "Newton's third law",
+      "Kepler's second law",
+      "Hooke's law",
+      "Snell's law"
+    ]
+  },
+  {
+    "subject": "Physics",
+    "topic": "Newton's laws",
+    "difficulty": "medium",
+    "question_type": "numerical",
+    "text": "A 2 kg object accelerates at 3 m/s². What is the net force?",
+    "correct_option": "6 N",
+    "wrong_options": [
+      "1.5 N",
+      "3 N",
+      "5 N",
+      "9 N",
+      "12 N"
+    ]
+  },
+  {
+    "subject": "Physics",
+    "topic": "Kinematics",
+    "difficulty": "medium",
+    "question_type": "numerical",
+    "text": "An object starts from rest and accelerates at 2 m/s² for 5 s. What is its final speed?",
+    "correct_option": "10 m/s",
+    "wrong_options": [
+      "2.5 m/s",
+      "5 m/s",
+      "7 m/s",
+      "20 m/s",
+      "25 m/s"
+    ]
+  },
+  {
+    "subject": "Physics",
+    "topic": "Density",
+    "difficulty": "medium",
+    "question_type": "numerical",
+    "text": "A sample has mass 500 g and volume 250 cm³. What is its density?",
+    "correct_option": "2 g/cm³",
+    "wrong_options": [
+      "0.5 g/cm³",
+      "1 g/cm³",
+      "4 g/cm³",
+      "5 g/cm³",
+      "10 g/cm³"
+    ]
+  },
+  {
+    "subject": "Physics",
+    "topic": "Waves",
+    "difficulty": "medium",
+    "question_type": "numerical",
+    "text": "A wave has frequency 50 Hz and wavelength 2 m. What is its speed?",
+    "correct_option": "100 m/s",
+    "wrong_options": [
+      "25 m/s",
+      "50 m/s",
+      "52 m/s",
+      "200 m/s",
+      "250 m/s"
+    ]
+  },
+  {
+    "subject": "Physics",
+    "topic": "Motion",
+    "difficulty": "medium",
+    "question_type": "numerical",
+    "text": "A car travels 100 m in 20 s at steady speed. What is its speed?",
+    "correct_option": "5 m/s",
+    "wrong_options": [
+      "2 m/s",
+      "4 m/s",
+      "10 m/s",
+      "20 m/s",
+      "80 m/s"
+    ]
+  },
+  {
+    "subject": "Physics",
+    "topic": "Work and power",
+    "difficulty": "medium",
+    "question_type": "numerical",
+    "text": "A 10 N force acts parallel to a displacement of 3 m. What work is done?",
+    "correct_option": "30 J",
+    "wrong_options": [
+      "3 J",
+      "7 J",
+      "10 J",
+      "13 J",
+      "300 J"
+    ]
+  },
+  {
+    "subject": "Physics",
+    "topic": "Projectiles",
+    "difficulty": "hard",
+    "question_type": "reasoning",
+    "text": "On level ground with no air resistance, which launch angle gives maximum range at fixed launch speed?",
+    "correct_option": "45°",
+    "wrong_options": [
+      "15°",
+      "30°",
+      "60°",
+      "75°",
+      "90°"
+    ]
+  },
+  {
+    "subject": "Physics",
+    "topic": "Energy",
+    "difficulty": "hard",
+    "question_type": "reasoning",
+    "text": "If an object's speed doubles while mass stays fixed, its kinetic energy becomes what?",
+    "correct_option": "Four times as large",
+    "wrong_options": [
+      "Half as large",
+      "Twice as large",
+      "Three times as large",
+      "Eight times as large",
+      "Unchanged"
+    ]
+  },
+  {
+    "subject": "Physics",
+    "topic": "Momentum",
+    "difficulty": "hard",
+    "question_type": "numerical",
+    "text": "A 2 kg body moving at 3 m/s sticks to a stationary 1 kg body. What is their common speed afterward?",
+    "correct_option": "2 m/s",
+    "wrong_options": [
+      "0.5 m/s",
+      "1 m/s",
+      "1.5 m/s",
+      "3 m/s",
+      "6 m/s"
+    ]
+  },
+  {
+    "subject": "Physics",
+    "topic": "Circular motion",
+    "difficulty": "hard",
+    "question_type": "reasoning",
+    "text": "For uniform circular motion, what is the magnitude of centripetal acceleration?",
+    "correct_option": "v²/r",
+    "wrong_options": [
+      "v/r",
+      "vr",
+      "v²r",
+      "r²/v",
+      "2πr"
+    ]
+  },
+  {
+    "subject": "Physics",
+    "topic": "Oscillations",
+    "difficulty": "hard",
+    "question_type": "reasoning",
+    "text": "In simple harmonic motion, where is speed maximum?",
+    "correct_option": "At the equilibrium position",
+    "wrong_options": [
+      "At either turning point",
+      "Only at the positive extreme",
+      "Only at the negative extreme",
+      "At every position equally",
+      "Only when acceleration is maximum"
+    ]
+  },
+  {
+    "subject": "Physics",
+    "topic": "Optics",
+    "difficulty": "hard",
+    "question_type": "reasoning",
+    "text": "A real object placed at 2f in front of a thin converging lens forms an image that is what?",
+    "correct_option": "Real, inverted and equal in size",
+    "wrong_options": [
+      "Virtual, upright and enlarged",
+      "Real, upright and smaller",
+      "Virtual, inverted and equal in size",
+      "Real, inverted and twice as large",
+      "No image is formed"
+    ]
+  },
+  {
+    "subject": "Mathematics",
+    "topic": "Arithmetic",
+    "difficulty": "easy",
+    "question_type": "numerical",
+    "text": "What is 12 multiplied by 8?",
+    "correct_option": "96",
+    "wrong_options": [
+      "20",
+      "84",
+      "88",
+      "104",
+      "108"
+    ]
+  },
+  {
+    "subject": "Mathematics",
+    "topic": "Number theory",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "Which of the following is a prime number?",
+    "correct_option": "29",
+    "wrong_options": [
+      "21",
+      "27",
+      "33",
+      "35",
+      "39"
+    ]
+  },
+  {
+    "subject": "Mathematics",
+    "topic": "Roots",
+    "difficulty": "easy",
+    "question_type": "numerical",
+    "text": "What is the positive square root of 144?",
+    "correct_option": "12",
+    "wrong_options": [
+      "10",
+      "11",
+      "13",
+      "14",
+      "16"
+    ]
+  },
+  {
+    "subject": "Mathematics",
+    "topic": "Percentages",
+    "difficulty": "easy",
+    "question_type": "numerical",
+    "text": "What is 25% of 80?",
+    "correct_option": "20",
+    "wrong_options": [
+      "15",
+      "16",
+      "25",
+      "30",
+      "40"
+    ]
+  },
+  {
+    "subject": "Mathematics",
+    "topic": "Pythagoras",
+    "difficulty": "easy",
+    "question_type": "numerical",
+    "text": "What is 3² + 4²?",
+    "correct_option": "25",
+    "wrong_options": [
+      "7",
+      "12",
+      "24",
+      "36",
+      "49"
+    ]
+  },
+  {
+    "subject": "Mathematics",
+    "topic": "Statistics",
+    "difficulty": "easy",
+    "question_type": "numerical",
+    "text": "What is the arithmetic mean of 2, 4 and 6?",
+    "correct_option": "4",
+    "wrong_options": [
+      "3",
+      "5",
+      "6",
+      "8",
+      "12"
+    ]
+  },
+  {
+    "subject": "Mathematics",
+    "topic": "Algebra",
+    "difficulty": "medium",
+    "question_type": "numerical",
+    "text": "Solve 3x + 5 = 20. What is x?",
+    "correct_option": "5",
+    "wrong_options": [
+      "3",
+      "4",
+      "6",
+      "7",
+      "15"
+    ]
+  },
+  {
+    "subject": "Mathematics",
+    "topic": "Number theory",
+    "difficulty": "medium",
+    "question_type": "numerical",
+    "text": "What is the least common multiple of 12 and 18?",
+    "correct_option": "36",
+    "wrong_options": [
+      "6",
+      "18",
+      "24",
+      "54",
+      "72"
+    ]
+  },
+  {
+    "subject": "Mathematics",
+    "topic": "Calculus",
+    "difficulty": "medium",
+    "question_type": "conceptual",
+    "text": "What is the derivative of x² with respect to x?",
+    "correct_option": "2x",
+    "wrong_options": [
+      "x",
+      "x²",
+      "2",
+      "x³",
+      "2x²"
+    ]
+  },
+  {
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "difficulty": "medium",
+    "question_type": "reasoning",
+    "text": "What is the probability of rolling an even number on a fair six-sided die?",
+    "correct_option": "1/2",
+    "wrong_options": [
+      "1/6",
+      "1/3",
+      "2/3",
+      "5/6",
+      "1"
+    ]
+  },
+  {
+    "subject": "Mathematics",
+    "topic": "Geometry",
+    "difficulty": "medium",
+    "question_type": "numerical",
+    "text": "What is the area of a triangle with base 8 and perpendicular height 5?",
+    "correct_option": "20 square units",
+    "wrong_options": [
+      "13 square units",
+      "16 square units",
+      "25 square units",
+      "40 square units",
+      "80 square units"
+    ]
+  },
+  {
+    "subject": "Mathematics",
+    "topic": "Exponents",
+    "difficulty": "medium",
+    "question_type": "numerical",
+    "text": "What is 2 to the power of 5?",
+    "correct_option": "32",
+    "wrong_options": [
+      "10",
+      "16",
+      "25",
+      "64",
+      "128"
+    ]
+  },
+  {
+    "subject": "Mathematics",
+    "topic": "Integration",
+    "difficulty": "hard",
+    "question_type": "numerical",
+    "text": "What is the definite integral of x² from x = 0 to x = 1?",
+    "correct_option": "1/3",
+    "wrong_options": [
+      "1/2",
+      "1",
+      "2/3",
+      "2",
+      "3"
+    ]
+  },
+  {
+    "subject": "Mathematics",
+    "topic": "Matrices",
+    "difficulty": "hard",
+    "question_type": "numerical",
+    "text": "What is the determinant of the matrix with rows [2, 3] and [1, 4]?",
+    "correct_option": "5",
+    "wrong_options": [
+      "2",
+      "4",
+      "7",
+      "8",
+      "11"
+    ]
+  },
+  {
+    "subject": "Mathematics",
+    "topic": "Probability",
+    "difficulty": "hard",
+    "question_type": "reasoning",
+    "text": "If independent events A and B have P(A) = 0.4, what is P(A given B) when P(B)>0?",
+    "correct_option": "0.4",
+    "wrong_options": [
+      "0.16",
+      "0.2",
+      "0.6",
+      "0.8",
+      "1"
+    ]
+  },
+  {
+    "subject": "Mathematics",
+    "topic": "Quadratics",
+    "difficulty": "hard",
+    "question_type": "numerical",
+    "text": "What are the roots of x² − 5x + 6 = 0?",
+    "correct_option": "2 and 3",
+    "wrong_options": [
+      "1 and 6",
+      "−2 and −3",
+      "−1 and −6",
+      "1 and 5",
+      "3 and 6"
+    ]
+  },
+  {
+    "subject": "Mathematics",
+    "topic": "Limits",
+    "difficulty": "hard",
+    "question_type": "conceptual",
+    "text": "What is the limit of sin(x)/x as x approaches zero, with x in radians?",
+    "correct_option": "1",
+    "wrong_options": [
+      "0",
+      "−1",
+      "1/2",
+      "2",
+      "Undefined"
+    ]
+  },
+  {
+    "subject": "Mathematics",
+    "topic": "Logarithms",
+    "difficulty": "hard",
+    "question_type": "numerical",
+    "text": "What is log base 2 of 32?",
+    "correct_option": "5",
+    "wrong_options": [
+      "2",
+      "3",
+      "4",
+      "6",
+      "8"
+    ]
+  },
+  {
+    "subject": "Computer Science",
+    "topic": "Computer basics",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "What does CPU stand for?",
+    "correct_option": "Central Processing Unit",
+    "wrong_options": [
+      "Computer Processing Utility",
+      "Central Program Unit",
+      "Control Processing User",
+      "Core Power Unit",
+      "Computer Program Utility"
+    ]
+  },
+  {
+    "subject": "Computer Science",
+    "topic": "Number systems",
+    "difficulty": "easy",
+    "question_type": "numerical",
+    "text": "What is binary 101 in decimal?",
+    "correct_option": "5",
+    "wrong_options": [
+      "3",
+      "4",
+      "6",
+      "7",
+      "10"
+    ]
+  },
+  {
+    "subject": "Computer Science",
+    "topic": "Web fundamentals",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "What does HTML stand for?",
+    "correct_option": "HyperText Markup Language",
+    "wrong_options": [
+      "HighText Machine Language",
+      "HyperTransfer Markup Language",
+      "Home Tool Markup Language",
+      "HyperText Markdown Language",
+      "High Transfer Machine Logic"
+    ]
+  },
+  {
+    "subject": "Computer Science",
+    "topic": "Data representation",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "How many bits are in one byte?",
+    "correct_option": "8",
+    "wrong_options": [
+      "2",
+      "4",
+      "6",
+      "10",
+      "16"
+    ]
+  },
+  {
+    "subject": "Computer Science",
+    "topic": "Databases",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "What is the primary purpose of a relational table's primary key?",
+    "correct_option": "Uniquely identify each row",
+    "wrong_options": [
+      "Automatically encrypt all fields",
+      "Sort all query results",
+      "Store image files",
+      "Remove every duplicate value in the database",
+      "Calculate table size"
+    ]
+  },
+  {
+    "subject": "Computer Science",
+    "topic": "Python",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "Which pair of brackets creates an empty list in Python?",
+    "correct_option": "[]",
+    "wrong_options": [
+      "{}",
+      "()",
+      "<>",
+      "//",
+      "set()"
+    ]
+  },
+  {
+    "subject": "Computer Science",
+    "topic": "Algorithms",
+    "difficulty": "medium",
+    "question_type": "conceptual",
+    "text": "What is the time complexity of binary search on a sorted array?",
+    "correct_option": "O(log n)",
+    "wrong_options": [
+      "O(1)",
+      "O(n)",
+      "O(n log n)",
+      "O(n²)",
+      "O(2ⁿ)"
+    ]
+  },
+  {
+    "subject": "Computer Science",
+    "topic": "SQL",
+    "difficulty": "medium",
+    "question_type": "application",
+    "text": "Which SQL function counts the number of rows returned by a query?",
+    "correct_option": "COUNT(*)",
+    "wrong_options": [
+      "SUM(*)",
+      "MAX(*)",
+      "MIN(*)",
+      "AVG(*)",
+      "LENGTH(*)"
+    ]
+  },
+  {
+    "subject": "Computer Science",
+    "topic": "Networking",
+    "difficulty": "medium",
+    "question_type": "conceptual",
+    "text": "Which protocol provides reliable ordered byte-stream transport?",
+    "correct_option": "TCP",
+    "wrong_options": [
+      "UDP",
+      "IP",
+      "ICMP",
+      "ARP",
+      "DNS"
+    ]
+  },
+  {
+    "subject": "Computer Science",
+    "topic": "Data structures",
+    "difficulty": "medium",
+    "question_type": "conceptual",
+    "text": "Which data structure uses last-in, first-out access?",
+    "correct_option": "Stack",
+    "wrong_options": [
+      "Queue",
+      "Linked list in FIFO mode",
+      "Priority queue",
+      "Binary search tree",
+      "Hash table"
+    ]
+  },
+  {
+    "subject": "Computer Science",
+    "topic": "Web fundamentals",
+    "difficulty": "medium",
+    "question_type": "conceptual",
+    "text": "Which language primarily styles the appearance of web pages?",
+    "correct_option": "CSS",
+    "wrong_options": [
+      "SQL",
+      "C",
+      "JSON",
+      "XML",
+      "Bash"
+    ]
+  },
+  {
+    "subject": "Computer Science",
+    "topic": "Web protocols",
+    "difficulty": "medium",
+    "question_type": "application",
+    "text": "Which HTTP status code most commonly means a resource was not found?",
+    "correct_option": "404",
+    "wrong_options": [
+      "200",
+      "201",
+      "301",
+      "400",
+      "500"
+    ]
+  },
+  {
+    "subject": "Computer Science",
+    "topic": "Databases",
+    "difficulty": "hard",
+    "question_type": "conceptual",
+    "text": "In ACID transactions, what does the letter I represent?",
+    "correct_option": "Isolation",
+    "wrong_options": [
+      "Integrity",
+      "Indexing",
+      "Idempotence",
+      "Iteration",
+      "Interoperability"
+    ]
+  },
+  {
+    "subject": "Computer Science",
+    "topic": "Algorithms",
+    "difficulty": "hard",
+    "question_type": "conceptual",
+    "text": "What is the worst-case time complexity of traditional quicksort?",
+    "correct_option": "O(n²)",
+    "wrong_options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n log n)",
+      "O(2ⁿ)"
+    ]
+  },
+  {
+    "subject": "Computer Science",
+    "topic": "Operating systems",
+    "difficulty": "hard",
+    "question_type": "reasoning",
+    "text": "Which condition requires processes to form a cycle of waiting on one another for resources?",
+    "correct_option": "Circular wait",
+    "wrong_options": [
+      "Mutual exclusion",
+      "Preemption",
+      "Resource sharing",
+      "Priority inversion",
+      "Paging"
+    ]
+  },
+  {
+    "subject": "Computer Science",
+    "topic": "Database design",
+    "difficulty": "hard",
+    "question_type": "conceptual",
+    "text": "Which issue does third normal form primarily address in a relation already in second normal form?",
+    "correct_option": "Transitive dependencies of non-key attributes",
+    "wrong_options": [
+      "The need for indexes",
+      "Unencrypted passwords",
+      "Every many-to-many relationship",
+      "SQL injection",
+      "All possible duplicate records"
+    ]
+  },
+  {
+    "subject": "Computer Science",
+    "topic": "Hash functions",
+    "difficulty": "hard",
+    "question_type": "conceptual",
+    "text": "What is a hash collision?",
+    "correct_option": "Different inputs produce the same hash value",
+    "wrong_options": [
+      "One input has two different lengths",
+      "A hash table is always full",
+      "An input is encrypted with two keys",
+      "A search has no result",
+      "Two identical inputs produce different deterministic hashes"
+    ]
+  },
+  {
+    "subject": "Computer Science",
+    "topic": "Graph algorithms",
+    "difficulty": "hard",
+    "question_type": "reasoning",
+    "text": "Which search finds the shortest path in edge count in an unweighted graph?",
+    "correct_option": "Breadth-first search",
+    "wrong_options": [
+      "Depth-first search",
+      "Selection sort",
+      "Binary search",
+      "Heap sort",
+      "Greedy best-first search"
+    ]
+  }
+]

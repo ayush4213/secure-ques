@@ -1,0 +1,20 @@
+[
+  {
+    "subject": "Electrical",
+    "topic": "Semiconductors",
+    "difficulty": "medium",
+    "question_type": "conceptual",
+    "text": "Which device primarily allows current flow in one direction under normal operation?",
+    "correct_option": "A diode",
+    "wrong_options": ["A resistor", "An inductor", "A capacitor", "A transformer", "A fuse"]
+  },
+  {
+    "subject": "Chemistry",
+    "topic": "Organic chemistry",
+    "difficulty": "easy",
+    "question_type": "conceptual",
+    "text": "Which functional group is characteristic of an alcohol?",
+    "correct_option": "Hydroxyl (−OH)",
+    "wrong_options": ["Carboxyl (−COOH)", "Aldehyde (−CHO)", "Amino (−NH₂)", "Carbonyl (>C=O)", "Nitro (−NO₂)"]
+  }
+]

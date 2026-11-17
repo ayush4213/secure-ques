@@ -1,0 +1,16 @@
+# Optional Render Blueprint. Persistent disks require a paid Render instance.
+services:
+  - type: web
+    name: securepaper-mcq-demo
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: SECUREPAPER_ADMIN_KEY
+        generateValue: true
+      - key: SECUREPAPER_DATA_DIR
+        value: /var/data
+    disk:
+      name: securepaper-db
+      mountPath: /var/data
+      sizeGB: 1
